@@ -31,16 +31,16 @@ export class AppModule { }
  - Use ng-fiddle template
 
 ```html 
-<ng-fiddle userName="iwannabebot"  fiddleId="134aee6d3a07430e9a1079697e4fc03d" fileName="TestFiddle2.js"></ng-fiddle>
+<ng-fiddle url="http://jsfiddle.net/zalun/NmudS" tabs="result,js,html,css" skin="dark"></ng-fiddle>
 ```
 
  - Parameters
 
-   - userName: string
+   - url: string
   
-   - fiddleId:  string
+   - tabs:  string (optional)
   
-   - filename: string (optional)
+   - skin: string (optional)
 
 
 # Modify this library 
