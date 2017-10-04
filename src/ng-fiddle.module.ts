@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { NgFiddleComponent } from './components';
 import { NgFiddleService } from './services';
-import { CustomSafePipe } from './pipes';
 @NgModule({
   providers: [
-    NgFiddleService,
+    NgFiddleService
   ],
   declarations: [
-    NgFiddleComponent,
-    CustomSafePipe
+    NgFiddleComponent
   ],
   exports: [
-    NgFiddleComponent,
-    CustomSafePipe
+    NgFiddleComponent
   ]
 })
 export class NgFiddleModule {

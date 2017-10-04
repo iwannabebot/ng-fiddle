@@ -5,7 +5,7 @@ import { NgFiddleService } from '../../services';
 @Component({
   selector: 'ng-fiddle',
   styleUrls: ['./ng-fiddle.component.scss'],
-  templateUrl: './ng-fiddle.component.html',
+  templateUrl: './ng-fiddle.component.html'
 })
 /**
  * NgFiddleComponent
@@ -27,12 +27,14 @@ export class NgFiddleComponent implements AfterViewInit, AfterViewChecked {
    */
   @Input() public skin: string = '';
 
-  private iFrameUrl: string;
+  private iFrameUrl: any;
 
-  constructor(private cdRef: ChangeDetectorRef) {}
+  constructor(private cdRef: ChangeDetectorRef, private sanitizer: DomSanitizer) {}
 
   public ngAfterViewInit() {
-    this.iFrameUrl = NgFiddleService.getFiddleSrc(this.url, this.tabs, this.skin);
+    const tempUrl = NgFiddleService.getFiddleSrc(this.url, this.tabs, this.skin);
+    this.iFrameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(tempUrl);
+    
   }
 
   public ngAfterViewChecked() {

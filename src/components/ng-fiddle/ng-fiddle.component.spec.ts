@@ -11,23 +11,29 @@ import { NgFiddleModule } from '../../';
 import { NgFiddleComponent } from './ng-fiddle.component';
 
 describe('NgFiddleComponent Positive Test', () => {
-  TestBed.configureTestingModule({
-    declarations: [NgFiddleComponent]
-  });
-  const fixture: ComponentFixture<NgFiddleComponent> = TestBed.createComponent(NgFiddleComponent);
-  const component: NgFiddleComponent = this.fixture.componentInstance;
+  
+  let fixture: ComponentFixture<NgFiddleComponent>;
+  let component: NgFiddleComponent;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [NgFiddleComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
-    this.component.url = 'http://jsfiddle.net/zalun/NmudS';
-    this.component.tabs = 'result,js,html,css';
-    this.component.skin = 'dark';
+    fixture = TestBed.createComponent(NgFiddleComponent);
+    component = fixture.componentInstance;
+    component.url = 'http://jsfiddle.net/zalun/NmudS';
+    component.tabs = 'result,js,html,css';
+    component.skin = 'dark';
   });
 
   it('When loaded should work fine', () => {
-    this.fixture.detectChanges();
-    expect(this.component.url === 'http://jsfiddle.net/zalun/NmudS').toBeTruthy();
-    expect(this.component.tabs === 'result,js,html,css').toBeTruthy();
-    expect(this.component.skin === 'dark').toBeTruthy();
+    fixture.detectChanges();
+    expect(component.url === 'http://jsfiddle.net/zalun/NmudS').toBeTruthy();
+    expect(component.tabs === 'result,js,html,css').toBeTruthy();
+    expect(component.skin === 'dark').toBeTruthy();
     expect(true).toBeTruthy();
   });
 
