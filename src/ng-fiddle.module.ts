@@ -12,6 +12,7 @@ import { CustomSafePipe } from './pipes';
   ],
   exports: [
     NgFiddleComponent,
+    CustomSafePipe
   ]
 })
 export class NgFiddleModule {
