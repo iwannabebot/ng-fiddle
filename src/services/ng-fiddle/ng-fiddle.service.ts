@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Rx';
 @Injectable()
 export class NgFiddleService {
   public static getFiddleSrc(url: string, tabs: string, skin: string): string {
-    if(skin === ''){
+    if (skin === '') {
       skin = 'light';
     }
     return `${url}/embedded/${tabs}/${skin}/`;
