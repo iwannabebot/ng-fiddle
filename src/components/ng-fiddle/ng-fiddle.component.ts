@@ -34,7 +34,6 @@ export class NgFiddleComponent implements AfterViewInit, AfterViewChecked {
   public ngAfterViewInit() {
     const tempUrl = NgFiddleService.getFiddleSrc(this.url, this.tabs, this.skin);
     this.iFrameUrl = this.sanitizer.bypassSecurityTrustResourceUrl(tempUrl);
-    
   }
 
   public ngAfterViewChecked() {

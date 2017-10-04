@@ -10,6 +10,9 @@ export class NgFiddleService {
     if (skin === '') {
       skin = 'light';
     }
+    if (tabs === '') {
+      tabs = 'result,js,html,css';
+    }
     return `${url}/embedded/${tabs}/${skin}/`;
   }
 }
