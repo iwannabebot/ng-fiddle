@@ -9,7 +9,7 @@
 
  - Install this Library
 
-[![NPM](https://nodei.co/npm/ng-fiddle.png?mini=true)](https://npmjs.org/package/ng-fiddle)
+[![NPM](https://nodei.co/npm/ng-fiddle.png?mini=true)](https://npmjs.org/package/ng-fiddle) [![Greenkeeper badge](https://badges.greenkeeper.io/iwannabebot/ng-fiddle.svg)](https://greenkeeper.io/)
 
  - Declare NgFiddleModule in your root module
 
